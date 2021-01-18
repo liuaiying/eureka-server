@@ -1,0 +1,20 @@
+server:
+  port: 8769
+spring :
+  application:
+    name : config-server
+  cloud :
+    config :
+      server:
+        git:
+          uri: https://github.com/liuaiying/hello
+          searchPaths: test01	 #远程仓库的文件夹地址
+          default-label: master
+          username: liuaiying
+          password: xhy010921
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7000/eureka
+

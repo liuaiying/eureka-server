@@ -1,0 +1,16 @@
+server:
+  port: 7999
+spring:
+  application:
+    name: eureka-hystrix-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+  instance:
+    hostname: localhost
+feign:
+  hystrix:
+    enabled: true
+
+
